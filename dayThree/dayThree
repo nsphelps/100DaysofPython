@@ -1,0 +1,96 @@
+# Day Three: Today is all about conditional statements such as  if, elif, else and more!!
+# Written By: Nick Phelps
+# Date: May 07, 2024
+
+# In today's project, we will be building a text based treasure hunt game. This project
+# is intended to reinforce the learning we did today about conditional statements.
+#
+# To play the game, users will be prompted to input specific information based on a
+# given prompt such as "You stand at a crossroad, do you want to go left or right?"
+# The user would be expected to enter either "left" or "right".
+#
+# Please note that this code is not expected to include error handling such as
+# input validation. If a user enters something that is not "left" or "right"
+# then a message stating that the entered an invalid choice is displayed.
+
+print('''
+_                                     _     _                 _ 
+| |                                   (_)   | |               | |
+| |_ _ __ ___  __ _ ___ _   _ _ __ ___ _ ___| | __ _ _ __   __| |
+| __| '__/ _ \/ _` / __| | | | '__/ _ \ / __| |/ _` | '_ \ / _` |
+| |_| | |  __/ (_| \__ \ |_| | | |  __/ \__ \ | (_| | | | | (_| |
+ \__|_|  \___|\__,_|___/\__,_|_|  \___|_|___/_|\__,_|_| |_|\__,_|
+ ''')
+
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/________
+*******************************************************************************
+''')
+
+print("Welcome to Treasure Island adventurer!!")
+print("Your mission is to find the treasure or die trying!")
+
+print("\n")
+userInput = input("You stand before a crossroad. Which way do you want to go? ('left' or 'right')")
+
+if userInput == "left":
+    userInput = input("You continue down the trail until you reach a sandy shore. What would you like to do? "
+                      "('wait' or 'swim')")
+    if userInput == "wait":
+        print("A small boat gently drifts to the shore in front of you seemingly propelled by itself.\n"
+                          "You step inside and the boat glides towards a small island in the distance.")
+        userInput = input("You step out of the boat in front of a small house with three doors; red, yellow, and blue.\n"
+                          "Which door do you choose? ('red', 'yellow', 'blue')")
+        if userInput == 'red':
+            print("You stand before the red door and reach out your hand. As you pull the door open, what begins as a\n"
+                  "gentle breeze turns into a raging inferno. You can't pull your hand away from the door knob and you\n"
+                  "smell your flesh beginning to melt from your body. As you scream in agony you watch as a devilish\n"
+                  "figure cackles in the fiery distance.")
+            print("GAME OVER!!")
+        if userInput == 'yellow':
+            print("You reach for the yellow door's handle and feel warmth fill your body. As you open the door you look\n"
+                  "out onto the most beautiful sight you've ever seen. Gold, jewels, and every other imaginable\n"
+                  "treasure as far as the eye can see. You step through the doorway, pick up a golden chalice and\n"
+                  "grin to yourself. You've found it!")
+            print("Congratulations! You've won!!")
+        if userInput == 'blue':
+            print("You place your hand on the cool doorknob of the blue door. As you pull the door toward yourself,\n"
+                  "you feel an icy wind assault your skin. Your hand is frozen solid to the handle and breaks like\n"
+                  "shattered glass as you try to pull away. Your agonized screams echo into the tundra beyond the door\n"
+                  "as a furry, white form steps into frame to drag your body into the wasteland beyond.")
+            print("GAME OVER!!")
+    else:
+        print("You take a running leap into the clear waters and begin to swim toward a small island in the distance.")
+        print("As you swim, your arms begin to burn with fatigue and your legs feel stiff like wood.")
+        print("You begin to regret stepping into the cool, blue waves and glance over your shoulder as you consider\n"
+              "turning back towards the shore.")
+        print("You realize that you are only a few feet from the shore and panic begins to set in as you look below\n"
+              "the tranquil water in front of you. Bones litter the white sand below...")
+        print("Finally your muscles seize as you sink below the waves and water fills your lungs. Your last thought\n"
+              "is of the boat that gentle passes over your head.")
+        print("GAME OVER!!")
+else:
+    print("As you wander the trail you begin to hear gutteral laughter coming from the bushes all around.")
+    print("You heart begins to race as you pick up the pace. In your haste you don't notice the disturbed ground"
+          "beneath your feet.")
+    print("Suddenly the ground opens up around you and you fall onto jagged spikes. You breath your last breath\n"
+          "as ugly goblin heads peer out over the hole.")
+    print("GAME OVER!")
