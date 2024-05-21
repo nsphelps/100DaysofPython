@@ -45,7 +45,5 @@ elif user_num == 1 and comp_num == 2:
     print("You lose!")
 elif user_num == 2 and comp_num == 0:
     print("You lose!")
-elif user_num == 2 and comp_num == 1:
-    print("You win!")
 else:
-    print("Not a valid choice")
+    print("You win!")
