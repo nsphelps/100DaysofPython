@@ -6,7 +6,7 @@
 # For this game, I decided to make use of the module I was practicing with earlier
 # and create the ASCII art inside that module. This just help keep things cleaner IMHO. 
 import random
-import my_module
+import game_options.py
 
 # Assign different ASCII art to choices
 rock = my_module.rock
