@@ -1,6 +1,4 @@
-#This is just to test how modules work, nothing to see here
-pi = 3.14159
-
+#This is simply a module that contains the different ascii art for the rock paper scissors game
 rock = '''
     ________
 ---'    ____)
