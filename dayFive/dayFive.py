@@ -70,11 +70,19 @@
 # Important, there should only be 1 print statement in your console output. It should just print the final total and not every step of
 # the calculation. Also, we will constrain the inputs to only take numbers from 0 to a max of 1000.
 
-target = int(input()) # Enter a number between 0 and 1000
+#target = int(input()) # Enter a number between 0 and 1000
 ### Dont change the code above ###
-total = 0
-target += 1
-for i in range(0, target, 2):
-    total += i
+#total = 0
+#target += 1
+#for i in range(0, target, 2):
+#    total += i
 
-print(total)
+#print(total)
+#########################################################################################################################################
+# Interactive challenge 4: Fizzbuzz
+# Write a program that automatically prints the solution to the FizzBuzz game. These are the rules of FizzBuzz game:
+#   - Print each number from 1 to 100 in turn and include the number 100
+#   - When the number is divisible by 3 then instead of printing the number it should print "Fizz"
+#   - When the number is divisible by 5 then instead of printing the number it should print "Buzz"
+#   - And if the number is divisible by both 3 and 5 then it should print "FizzBuss"
+
