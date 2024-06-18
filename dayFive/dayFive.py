@@ -107,76 +107,76 @@
 import random
 
 # First, I set up a few lists that have different letters, numbers, and special characters
-#letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
            'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-#numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
-#characters = ['!', '@', '#', '$', '%', '^', '&', '?', '<', '>']
+numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+characters = ['!', '@', '#', '$', '%', '^', '&', '?', '<', '>']
 
 # Initialize a password list and string
-#userPass = []  # Used to hold the randomly generated characters
-#password = ""  # The userPass list will be used to randomly generate the password string
+userPass = []  # Used to hold the randomly generated characters
+password = ""  # The userPass list will be used to randomly generate the password string
 
 # Prompt user for desired password length, number of special characters and number of integers
-#desired_len = int(input("How many characters would you like your password to be?\n"))
-#num_char = int(input ("How many special characters would you like in your password?(i.e @, #, etc)\n"))
-#num_int = int(input ("How many numbers would you like in your password?\n"))
+desired_len = int(input("How many characters would you like your password to be?\n"))
+num_char = int(input ("How many special characters would you like in your password?(i.e @, #, etc)\n"))
+num_int = int(input ("How many numbers would you like in your password?\n"))
 
 # Iterate over the desired password length
-#for i in range(1, desired_len + 1):
+for i in range(1, desired_len + 1):
     # Randomly select which list to pull from as long as there are more special characters or numbers to generate
-#    while (num_char != 0) or (num_int != 0):
-#        rand_entry = random.randint(1, 3)  # Generate a random number between 1-3
+    while (num_char != 0) or (num_int != 0):
+        rand_entry = random.randint(1, 3)  # Generate a random number between 1-3
         
         # If 1, generate a random special character and add it to the userPass list
-#        if rand_entry == 1:
-#            if (num_char != 0):
-#                rand_char = random.choice(characters)
-#                userPass.append(rand_char)
-#                num_char -= 1
+        if rand_entry == 1:
+            if (num_char != 0):
+                rand_char = random.choice(characters)
+                userPass.append(rand_char)
+                num_char -= 1
         # If 2, generate a random number and add it to the userPass list
-#        elif rand_entry == 2:
-#            if (num_int != 0):
-#                rand_int = random.choice(numbers)
-#                userPass.append(rand_int)
-#                num_int -= 1
+        elif rand_entry == 2:
+            if (num_int != 0):
+                rand_int = random.choice(numbers)
+                userPass.append(rand_int)
+                num_int -= 1
         # Otherwise, generate a random letter and add it to the userPass list
-#        else:
+        else:
             # Flip a coin to determine if the letter should be upper or lower-case
-#            flip_coin = random.randint(1, 10)
+            flip_coin = random.randint(1, 10)
             # Between 1-5, lower-case
-#            if flip_coin in range(1, 5):
-#                rand_letter = random.choice(letters)
-#                rand_lower = rand_letter.lower()
-#                userPass.append(rand_lower)
+            if flip_coin in range(1, 5):
+                rand_letter = random.choice(letters)
+                rand_lower = rand_letter.lower()
+                userPass.append(rand_lower)
             #Otherwise, upper-case
-#            else:
-#                rand_letter = random.choice(letters)
-#                userPass.append(rand_letter)
+            else:
+                rand_letter = random.choice(letters)
+                userPass.append(rand_letter)
 
 # Continue appending random letters if / when the number of desired special characters / numbers is fulfilled
-#while len(userPass) != desired_len:
-#    flip_coin = random.randint(1, 10)
-#    if flip_coin in range(1, 5):
-#        rand_letter = random.choice(letters)
-#        rand_letter = rand_letter.lower()
-#        userPass.append(rand_letter)
-#    else:
-#        rand_letter = random.choice(letters)
-#        userPass.append(rand_letter)
+while len(userPass) != desired_len:
+    flip_coin = random.randint(1, 10)
+    if flip_coin in range(1, 5):
+        rand_letter = random.choice(letters)
+        rand_letter = rand_letter.lower()
+        userPass.append(rand_letter)
+    else:
+        rand_letter = random.choice(letters)
+        userPass.append(rand_letter)
 
 # Used for testing, prints the userPass list
 #print(userPass)
 
 # Construct a random password based on the userPass list
-#for i in range(1, len(userPass) + 1):
-#    rand_char = random.choice(userPass) # Chose a random character inside the userPass list
-#    password += rand_char               # Add the random character to the password string
-#    userPass.remove(rand_char)          # Remove the previous random character from the userPass list options
+for i in range(1, len(userPass) + 1):
+    rand_char = random.choice(userPass) # Chose a random character inside the userPass list
+    password += rand_char               # Add the random character to the password string
+    userPass.remove(rand_char)          # Remove the previous random character from the userPass list options
 
 # Print the generated password to the user
-#print("Your PyPassword is: " + password)
+print("Your PyPassword is: " + password)
 
 # Some key notes learned, use the random.choice funtion to select a random entry in a list
 # For example, random.choice(letters) could be used instead of having the 'x = random.randint(1, 10)...'
 # Basically, this ^^ just cleans up the code and makes it more efficient. 
-# Another lesson, I over complicate a lot of things...
+# Another lesson, I over complicate a lot of things
